@@ -18,6 +18,7 @@ enum custom_keycodes {
     O_ACUTE,
     A_ACUTE,
     L_ACUTE,
+    Y_ACUTE,
     T_CARON,
     Z_CARON,
     O_CARON,
@@ -81,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_ACCENTS] = LAYOUT(
      _______ , A_DIA , _______ , E_ACUTE, R_ACUTE, T_CARON,                                       Z_CARON, U_ACUTE,I_ACUTE, O_ACUTE,O_CARON, _______,
      _______ ,A_ACUTE, S_CARON , D_CARON, _______, _______,                                       _______, _______,L_CARON, L_ACUTE, O_CIRC, _______,
-     _______ ,_______, _______ , C_CARON, _______, _______, _______,_______,     _______, _______,N_CARON, _______,_______, _______,_______, _______,
+     _______ ,Y_ACUTE, _______ , C_CARON, _______, _______, _______,_______,     _______, _______,N_CARON, _______,_______, _______,_______, _______,
                                  _______, _______, _______, _______,_______,     _______, _______,_______, _______, _______
     ),
 
@@ -194,27 +195,98 @@ static inline void tap_accented_letter(uint16_t letter, uint16_t dead_key) {
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
     switch (keycode) {
         case E_ACUTE:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_E, SK_ACUT);
+            }
+            return false;
+
         case R_ACUTE:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_R, SK_ACUT);
+            }
+            return false;
+
         case U_ACUTE:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_U, SK_ACUT);
+            }
+            return false;
+
         case I_ACUTE:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_I, SK_ACUT);
+            }
+            return false;
+
         case O_ACUTE:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_O, SK_ACUT);
+            }
+            return false;
+
         case A_ACUTE:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_A, SK_ACUT);
+            }
+            return false;
+
         case L_ACUTE:
             if (record->event.pressed) {
-               tap_accented_letter(keycode, SK_ACUT); 
+                tap_accented_letter(SK_L, SK_ACUT);
+            }
+            return false;
+
+        case Y_ACUTE:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_Y, SK_ACUT);
             }
             return false;
 
         case T_CARON:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_T, SK_CRN);
+            }
+            return false;
+
         case Z_CARON:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_Z, SK_CRN);
+            }
+            return false;
+
         case O_CARON:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_O, SK_CRN);
+            }
+            return false;
+
         case S_CARON:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_S, SK_CRN);
+            }
+            return false;
+
         case D_CARON:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_D, SK_CRN);
+            }
+            return false;
+
         case L_CARON:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_L, SK_CRN);
+            }
+            return false;
+
         case C_CARON:
+            if (record->event.pressed) {
+                tap_accented_letter(SK_C, SK_CRN);
+            }
+            return false;
+
         case N_CARON:
             if (record->event.pressed) {
-                tap_accented_letter(keycode, SK_CARN);
+                tap_accented_letter(SK_N, SK_CRN);
             }
             return false;
     }
