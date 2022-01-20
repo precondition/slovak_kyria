@@ -244,49 +244,49 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
 
         case T_CARON:
             if (record->event.pressed) {
-                tap_accented_letter(SK_T, SK_CRN);
+                tap_accented_letter(SK_T, SK_CARN);
             }
             return false;
 
         case Z_CARON:
             if (record->event.pressed) {
-                tap_accented_letter(SK_Z, SK_CRN);
+                tap_accented_letter(SK_Z, SK_CARN);
             }
             return false;
 
         case O_CARON:
             if (record->event.pressed) {
-                tap_accented_letter(SK_O, SK_CRN);
+                tap_accented_letter(SK_O, SK_CARN);
             }
             return false;
 
         case S_CARON:
             if (record->event.pressed) {
-                tap_accented_letter(SK_S, SK_CRN);
+                tap_accented_letter(SK_S, SK_CARN);
             }
             return false;
 
         case D_CARON:
             if (record->event.pressed) {
-                tap_accented_letter(SK_D, SK_CRN);
+                tap_accented_letter(SK_D, SK_CARN);
             }
             return false;
 
         case L_CARON:
             if (record->event.pressed) {
-                tap_accented_letter(SK_L, SK_CRN);
+                tap_accented_letter(SK_L, SK_CARN);
             }
             return false;
 
         case C_CARON:
             if (record->event.pressed) {
-                tap_accented_letter(SK_C, SK_CRN);
+                tap_accented_letter(SK_C, SK_CARN);
             }
             return false;
 
         case N_CARON:
             if (record->event.pressed) {
-                tap_accented_letter(SK_N, SK_CRN);
+                tap_accented_letter(SK_N, SK_CARN);
             }
             return false;
     }
