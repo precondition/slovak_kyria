@@ -321,6 +321,9 @@ bool oled_task_user(void) {
             case _QWERTZ:
                 oled_write_P(PSTR("QWERTZ\n"), false);
                 break;
+            case _ACCENTS:
+                oled_write_P(PSTR("ACCENTS\n"), false);
+                break;
             case _NAV:
                 oled_write_P(PSTR("Nav\n"), false);
                 break;
